@@ -18,7 +18,7 @@ pipeline{
         }
         stage('test'){
             steps{
-                bat 'timeout /t 20'
+                sleep(time: 10, unit: 'SECONDS')
                 bat 'curl -f http://localhost:3000'
             }
         }
